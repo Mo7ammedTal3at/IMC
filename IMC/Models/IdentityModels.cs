@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using IMC.Domain.DomainModels;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -24,7 +25,12 @@ namespace IMC.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-
+        public DbSet<Clinic> Clinics { get; set; }
+        public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<Visit> Visits { get; set; }
+        public DbSet<PatientReservation> PatientReservations { get; set; }
+        public DbSet<DoctorDay> DoctorDays { get; set; }
+        public DbSet<DoctorCalendar> DoctorCalendars { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Domain
+namespace IMC.Domain.DomainModels
 {
     public class DoctorDay
     {
@@ -14,7 +14,7 @@ namespace Domain
 
         [Required(ErrorMessage = "sorry,enter day name")]
         [DisplayName("day name")]
-        public string DayName { get; set; } 
+        public string DayName { get; set; }
         public virtual List<DoctorCalendar> DoctorCalendars { get; set; }
 
     }

@@ -4,15 +4,16 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Domain
+namespace IMC.Domain.DomainModels
 {
     public class Doctor
     {
         public int Id { get; set; }
-        
-        [Required(ErrorMessage ="sorry,enter docotr Name")]
+
+        [Required(ErrorMessage = "sorry,enter docotr Name")]
         [DisplayName("docotr Name")]
         public string Name { get; set; }
 
@@ -24,7 +25,7 @@ namespace Domain
         public string Nationality { get; set; }
 
 
-        [Required(ErrorMessage ="sorry,enter docotr's scient degree")]
+        [Required(ErrorMessage = "sorry,enter docotr's scient degree")]
         [DisplayName("scient degree")]
         public string ScientDegree { get; set; }
 
@@ -34,7 +35,7 @@ namespace Domain
 
         public bool IsSpecialist { get; set; }
 
-        [Required(ErrorMessage ="sorry,select a clinic")]
+        [Required(ErrorMessage = "sorry,select a clinic")]
         [DisplayName("clinic name")]
         [ForeignKey("Clinic")]
         public int ClinicId { get; set; }
@@ -47,3 +48,4 @@ namespace Domain
 
     }
 }
+

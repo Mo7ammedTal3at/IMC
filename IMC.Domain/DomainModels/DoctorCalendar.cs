@@ -6,17 +6,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain
+namespace IMC.Domain.DomainModels
 {
     public class DoctorCalendar
     {
         [Key]
         [Column(Order = 1)]
         public int DoctorId { get; set; }
-        
+
         [Key]
         [Column(Order = 2)]
-        public int DoctorDayId { get; set; }       
+        public int DoctorDayId { get; set; }
 
         public byte FromHour { get; set; }
         public byte ToHour { get; set; }

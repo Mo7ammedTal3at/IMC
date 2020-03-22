@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models
+namespace IMC.Domain.DomainModels
 {
-    public class IMCDbContext:DbContext
+    public class IMCDbContext : DbContext
     {
         public IMCDbContext()
           : base("DefaultConnection")

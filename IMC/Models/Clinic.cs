@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Domain
+namespace IMC.Models
 {
     public class Clinic
     {

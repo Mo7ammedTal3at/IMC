@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models.Interfaces
+namespace Model
 {
-    public interface IClinicRepositry:IGenericRepository<Clinic>
+    class Class1
     {
-
-
     }
 }

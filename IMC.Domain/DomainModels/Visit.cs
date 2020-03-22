@@ -4,15 +4,16 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Domain
+namespace IMC.Domain.DomainModels
 {
     public class Visit
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage ="sorry,enter start date of the visit")]
+        [Required(ErrorMessage = "sorry,enter start date of the visit")]
         [DisplayName("start date ")]
         public DateTime FromDate { get; set; }
 
@@ -21,10 +22,10 @@ namespace Domain
         public DateTime ToDate { get; set; }
 
 
-        [ForeignKey("Doctor"),Required(ErrorMessage ="sorry,enter doctor's name")]
+        [ForeignKey("Doctor"), Required(ErrorMessage = "sorry,enter doctor's name")]
         [DisplayName("doctor's name")]
         public int DoctorId { get; set; }
-        
+
         public virtual Doctor Doctor { get; set; }
     }
 }
